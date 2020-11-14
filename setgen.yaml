@@ -3,12 +3,23 @@ set_length: 5
 total_sets: 4
 allow_repeat: false
 
+# XXX maybe a set template list or something?
+sets:
+  - set_length: 5
+    allow_repeat: false
+  - set_length: 5
+    allow_repeat: false
+  - set_length: 5
+    allow_repeat: false
+  - set_length: 5
+    allow_repeat: false
+
 items:
   - title: Bicep Curl
     priority: 1
 
   - title: Chest Fly
-    priority: 1
+    priority: 2
 
   - title: Squat Row
     priority: 2
