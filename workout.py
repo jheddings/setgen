@@ -18,21 +18,25 @@ def load_config(config_file):
         conf = yaml.load(fp, Loader=YamlLoader)
 
     return conf
+
+################################################################################
+def build_set(exercises, length):
+    priority = [1 / entry['priority'] for entry in exercises]
+    set = random.choices(exercises, priority, k=set_length)
+    return set
     
 ################################################################################
 ## MAIN ENTRY
+
 conf = load_config('workout.yaml')
-
 exercises = conf['exercises']
-priority = [1 / entry['priority'] for entry in exercises]
-
 num_sets = conf['total_sets']
 set_length = conf['set_length']
 
 #print(sorted(exercises, key=lambda x: x['priority']))
 
 for loop in range(num_sets):
-    set = random.choices(exercises, priority, k=set_length)
+    set = build_set(exercises, set_length)
     print(f'== Set {loop+1} ==')
 
     for entry in set:
