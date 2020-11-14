@@ -1,5 +1,17 @@
 set_length: 5
 total_sets: 4
+allow_repeat: false
+
+# XXX maybe a set template list or something?
+sets:
+  - set_length: 5
+    allow_repeat: false
+  - set_length: 5
+    allow_repeat: false
+  - set_length: 5
+    allow_repeat: false
+  - set_length: 5
+    allow_repeat: false
 
 exercises:
   - name: Bicep Curl

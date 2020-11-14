@@ -23,6 +23,9 @@ def load_config(config_file):
 def build_set(exercises, length):
     priority = [1 / entry['priority'] for entry in exercises]
     set = random.choices(exercises, priority, k=set_length)
+
+    # TODO don't repeat exercises in a set
+
     return set
     
 ################################################################################
