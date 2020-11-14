@@ -1,0 +1,42 @@
+set_length: 5
+total_sets: 4
+
+exercises:
+  - name: Bicep Curl
+    priority: 1
+
+  - name: Chest Fly
+    priority: 2
+
+  - name: Squat Row
+    priority: 2
+
+  - name: Pistol Squat
+    priority: 3
+
+  - name: Standing Fallout
+    priority: 3
+
+  - name: Tricep Extension
+    priority: 3
+
+  - name: Chest Press
+    priority: 4
+
+  - name: Reverse Fly
+    priority: 4
+
+  - name: Twist Lunge
+    priority: 5
+
+  - name: Calf Raise
+    priority: 5
+
+  - name: Mountain Climber
+    priority: 6
+
+  - name: Hamstring Curl
+    priority: 7
+
+  - name: Free Play
+    priority: 10
