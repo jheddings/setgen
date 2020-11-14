@@ -33,8 +33,8 @@
           "class" : "Label",
           "alignment" : "left",
           "text" : "Items:",
-          "name" : "label1",
-          "font_size" : 18
+          "font_size" : 18,
+          "name" : "label1"
         },
         "selected" : false
       },
@@ -47,16 +47,16 @@
         "attributes" : {
           "font_name" : "<System>",
           "frame" : "{{60, 224}, {200, 32}}",
-          "spellchecking_type" : "default",
+          "spellchecking_type" : "no",
           "class" : "TextField",
           "uuid" : "1F238A89-21F1-4994-B7C6-D9B45BBC3DFD",
           "alignment" : "left",
           "text" : "5",
-          "autocorrection_type" : "default",
-          "name" : "size_text",
-          "font_size" : 17
+          "autocorrection_type" : "no",
+          "font_size" : 17,
+          "name" : "size_text"
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
@@ -86,11 +86,11 @@
     "frame" : "{{0, 0}, {320, 480}}",
     "class" : "View",
     "attributes" : {
-      "name" : "Set Generator",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "enabled" : true,
       "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "name" : "Set Generator",
       "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false
