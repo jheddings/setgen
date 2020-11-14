@@ -29,7 +29,7 @@ priority = [1 / entry['priority'] for entry in exercises]
 num_sets = conf['total_sets']
 set_length = conf['set_length']
 
-print(sorted(exercises, key=lambda x: x['priority']))
+#print(sorted(exercises, key=lambda x: x['priority']))
 
 for loop in range(num_sets):
     set = random.choices(exercises, priority, k=set_length)
