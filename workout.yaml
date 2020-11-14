@@ -39,4 +39,4 @@ exercises:
     priority: 7
 
   - name: Free Play
-    priority: 10
+    priority: 100
