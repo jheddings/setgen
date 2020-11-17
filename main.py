@@ -14,6 +14,9 @@ def gen_button_pressed(sender):
 
     form_set_table.data_source = data_source
     form_set_table.reload_data()
+    
+    counter = int(counter_label.text)
+    counter_label.text = str(counter + 1)
 
 ################################################################################
 ## MAIN ENTRY
@@ -21,5 +24,6 @@ def gen_button_pressed(sender):
 app = ui.load_view()
 form_size_text = app['size_text']
 form_set_table = app['set_table']
+counter_label = app['counter_label']
 
 app.present('sheet')

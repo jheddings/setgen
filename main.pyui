@@ -5,7 +5,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{238, 21}, {76, 32}}",
+        "frame" : "{{207, 21}, {100, 32}}",
         "class" : "Button",
         "attributes" : {
           "action" : "gen_button_pressed",
@@ -24,7 +24,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{6, 21}, {59, 32}}",
+        "frame" : "{{6, 21}, {105, 32}}",
         "class" : "Label",
         "attributes" : {
           "font_name" : "<System>",
@@ -32,9 +32,9 @@
           "uuid" : "DCBADDD3-86F3-4C42-BF75-EA85D38585F6",
           "class" : "Label",
           "alignment" : "left",
-          "text" : "Items:",
-          "font_size" : 18,
-          "name" : "label1"
+          "text" : "Items in Set:",
+          "name" : "label1",
+          "font_size" : 18
         },
         "selected" : false
       },
@@ -42,7 +42,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{73, 21}, {50, 32}}",
+        "frame" : "{{119, 21}, {80, 32}}",
         "class" : "TextField",
         "attributes" : {
           "font_name" : "<System>",
@@ -53,16 +53,16 @@
           "alignment" : "left",
           "text" : "5",
           "autocorrection_type" : "no",
-          "font_size" : 17,
-          "name" : "size_text"
+          "name" : "size_text",
+          "font_size" : 17
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
 
         ],
-        "frame" : "{{6, 61}, {308, 413}}",
+        "frame" : "{{6, 95}, {308, 379}}",
         "class" : "TableView",
         "attributes" : {
           "uuid" : "68E9E7ED-3D06-45FC-9AE6-F63DAF38ADF2",
@@ -81,16 +81,52 @@
           "flex" : "WH"
         },
         "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 61}, {84, 26}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label2",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "2ABA98C1-2935-4E4E-B9F9-6F0C7A3CDEA3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Set Number:",
+          "font_size" : 14,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{98, 61}, {61, 26}}",
+        "class" : "Label",
+        "attributes" : {
+          "font_name" : "<System>",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "2ABA98C1-2935-4E4E-B9F9-6F0C7A3CDEA3",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "0",
+          "name" : "counter_label",
+          "font_size" : 14
+        },
+        "selected" : true
       }
     ],
     "frame" : "{{0, 0}, {320, 480}}",
     "class" : "View",
     "attributes" : {
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
       "name" : "Set Generator",
-      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false
