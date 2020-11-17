@@ -4,10 +4,10 @@ total_sets: 4
 allow_repeat: false
 
 items:
-  - title: Chest Fly
+  - title: Squat Row
     priority: 100
 
-  - title: Squat Row
+  - title: Chest Fly
     priority: 90
 
   - title: Standing Fallout
@@ -22,8 +22,8 @@ items:
   - title: Chest Press
     priority: 80
 
-  - title: Pistol Squat
-    priority: 75
+  - title: Twist Lunge
+    priority: 70
 
   - title: Reverse Fly
     priority: 60
@@ -31,7 +31,7 @@ items:
   - title: Calf Raise
     priority: 50
 
-  - title: Twist Lunge
+  - title: Pistol Squat
     priority: 40
 
   - title: Mountain Climber
