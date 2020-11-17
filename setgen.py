@@ -34,7 +34,7 @@ def load_config(config_file):
 
 ################################################################################
 class Builder(object):
-    
+
     #---------------------------------------------------------------------------
     def __init__(self, items):
         self.items = items
@@ -51,7 +51,7 @@ class Builder(object):
         # generated a weighted list for sorting
         for item in self.items:
             item['__order'] = random.random() * item['priority']
-            
+
         population = sorted(self.items, key=lambda x: x['__order'], reverse=True)
         set = population[:length]
 
@@ -82,12 +82,12 @@ def main(conf):
 
         if num_sets > 1:
             print(f'== Set {set_num+1} ==')
-    
+
         for item in set:
             print(f'- {item["title"]}')
-    
+
         print()
-        
+
     return builder
 
 ################################################################################
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     args = parse_args()
     conf = load_config(args.config)
     builder = main(conf)
-    
+
     if args.histogram:
         for title in builder.stats:
             print(f'{title} => {builder.stats[title]}')

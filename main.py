@@ -14,7 +14,7 @@ def gen_button_pressed(sender):
 
     form_set_table.data_source = data_source
     form_set_table.reload_data()
-    
+
     counter = int(counter_label.text)
     counter_label.text = str(counter + 1)
 
