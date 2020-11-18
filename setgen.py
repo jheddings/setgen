@@ -10,7 +10,7 @@ def parse_args():
     argp.add_argument('--config', default='setgen.yaml',
                        help='configuration file (default: setgen.yaml)')
 
-    argp.add_argument('--histogram', action='store_true', default=False)
+    argp.add_argument('--stats', action='store_true', default=False)
 
     return argp.parse_args()
 
@@ -33,12 +33,32 @@ def load_config(config_file):
     return conf
 
 ################################################################################
+class Statistics(object):
+
+    #---------------------------------------------------------------------------
+    def __init__(self, items):
+        self.total = 0
+        self.counts = dict()
+
+        for item in items:
+            title = item['title']
+            self.counts[title] = 0
+
+    #---------------------------------------------------------------------------
+    def collect(self, items):
+        for item in items:
+            title = item['title']
+            self.counts[title] += 1
+
+        self.total += len(items)
+
+################################################################################
 class Builder(object):
 
     #---------------------------------------------------------------------------
     def __init__(self, items):
         self.items = items
-        self.stats = dict()
+        self.stats = Statistics(items)
 
     #---------------------------------------------------------------------------
     def build_set(self, length, allow_repeat=False):
@@ -53,24 +73,16 @@ class Builder(object):
             item['__order'] = random.random() * item['priority']
 
         population = sorted(self.items, key=lambda x: x['__order'], reverse=True)
-        set = population[:length]
+        current_set = population[:length]
 
-        self.update_stats(set)
-        return set
+        self.stats.collect(current_set)
 
-    #---------------------------------------------------------------------------
-    def update_stats(self, items):
-        for item in items:
-            title = item['title']
-            if title in self.stats:
-                self.stats[title] += 1
-            else:
-                self.stats[title] = 0
+        return current_set
 
 ################################################################################
 def main(conf):
     num_sets = conf.get('total_sets', 1)
-    set_length = conf.get('set_length', 3)
+    set_size = conf.get('set_size', 3)
     allow_repeat = conf.get('allow_repeat', False)
     hist = dict()
 
@@ -78,7 +90,7 @@ def main(conf):
     builder = Builder(items)
 
     for set_num in range(num_sets):
-        set = builder.build_set(set_length, allow_repeat=allow_repeat)
+        set = builder.build_set(set_size, allow_repeat=allow_repeat)
 
         if num_sets > 1:
             print(f'== Set {set_num+1} ==')
@@ -98,6 +110,8 @@ if __name__ == "__main__":
     conf = load_config(args.config)
     builder = main(conf)
 
-    if args.histogram:
-        for title in builder.stats:
-            print(f'{title} => {builder.stats[title]}')
+    if args.stats:
+        print(f'== Item Distribution ==')
+        counts = builder.stats.counts
+        for title in counts:
+            print(f'{title} => {counts[title]}')
