@@ -61,19 +61,25 @@ class Builder(object):
         self.stats = Statistics(items)
 
     #---------------------------------------------------------------------------
+    def _select_items(self, items, length):
+        # assign a weighted order to each item for sorting
+        for item in items:
+            item['__order'] = random.random() * item['priority']
+
+        population = sorted(items, key=lambda x: x['__order'], reverse=True)
+
+        # slice the population for the desired length
+        return population[:length]
+
+    #---------------------------------------------------------------------------
     def build_set(self, length, allow_repeat=False):
         priority = [entry['priority'] for entry in self.items]
 
         # use built in functions for generating random sets where possible...
         if allow_repeat:
-            return random.choices(self.items, priority, k=length)
-
-        # generated a weighted list for sorting
-        for item in self.items:
-            item['__order'] = random.random() * item['priority']
-
-        population = sorted(self.items, key=lambda x: x['__order'], reverse=True)
-        current_set = population[:length]
+            current_set = random.choices(self.items, priority, k=length)
+        else:
+            current_set = self._select_items(self.items, length)
 
         self.stats.collect(current_set)
 
@@ -84,7 +90,6 @@ def main(conf):
     num_sets = conf.get('total_sets', 1)
     set_size = conf.get('set_size', 3)
     allow_repeat = conf.get('allow_repeat', False)
-    hist = dict()
 
     items = conf.get('items')
     builder = Builder(items)
