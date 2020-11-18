@@ -1,5 +1,5 @@
 # used in script mode
-set_length: 5
+set_size: 5
 total_sets: 4
 allow_repeat: false
 
@@ -31,14 +31,51 @@ items:
   - title: Calf Raise
     priority: 50
 
+  - title: Reverse Crunch
+    priority: 50
+    link: https://www.youtube.com/watch?v=D2ZH7C0LeNM
+
+  - title: Hamstring Curl
+    priority: 50
+
   - title: Pistol Squat
     priority: 40
+
+  - title: Inverted Row
+    priority: 40
+
+  - title: Alligator
+    priority: 30
+    link: https://www.youtube.com/watch?v=aqYysbmvcFc
+
+  - title: Clock Press
+    priority: 30
+
+  - title: Swing & Tuck
+    priority: 30
+    link: https://www.youtube.com/watch?v=epov6HchS6A
+
+  - title: Crunch & Curl
+    priority: 30
+
+  - title: Power Pull
+    priority: 30
+    link: https://www.youtube.com/watch?v=FUTpOejIEzE
+
+  - title: Lateral Lunge
+    priority: 20
+    link: https://www.youtube.com/watch?v=XN81EZpQgkk
 
   - title: Mountain Climber
     priority: 20
 
-  - title: Hamstring Curl
-    priority: 10
+  - title: Atomic Pike
+    priority: 20
+    link: https://www.youtube.com/watch?v=Oo2mMAhOf6M
+
+  - title: Spider-Man
+    priority: 20
+    link: https://www.youtube.com/watch?v=fSoigipsZM8
 
   - title: Free Play
     priority: 1
