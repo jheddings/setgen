@@ -7,23 +7,23 @@ items:
   - title: Squat Row
     priority: 100
 
-  - title: Chest Fly
+  - title: Bicep Curl
+    priority: 95
+
+  - title: Chest Press
     priority: 90
 
   - title: Standing Fallout
     priority: 85
 
-  - title: Bicep Curl
-    priority: 80
-
   - title: Tricep Extension
     priority: 80
 
-  - title: Chest Press
+  - title: Chest Fly
     priority: 80
 
   - title: Twist Lunge
-    priority: 70
+    priority: 80
 
   - title: Reverse Fly
     priority: 60
