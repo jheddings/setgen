@@ -5,3 +5,11 @@ Simple script for generating random sets of values.  Most often used for generat
 ## Usage
 
 Operates on `yaml` configuration files.  See examples for setup.
+
+### Command Line
+
+TODO
+
+### Pythonista
+
+Run `main.py` at the top level.  This will use the `setgen.yaml` in the same folder.
